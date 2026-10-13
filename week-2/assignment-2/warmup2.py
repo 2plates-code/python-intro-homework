@@ -1,3 +1,6 @@
-# I used pwd to show where I was and cd to get to where I needed
-date = input("What is today's date? ")
-print("You said today is " + date)
+# commands I used to navigate
+# pwd (to show where I was) 
+# cd week-2 (to get to where I need to be)
+
+date = input("What is today's date?  ")
+print(f"You said today is {date}.")
