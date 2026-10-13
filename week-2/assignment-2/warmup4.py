@@ -1,5 +1,5 @@
 # calculates how many years until you become an octagenarian
-age = (input("Enter your age: "))
+age = int((input("Enter your age: "))
 years_until_octagenarian = 80 - age
 print(f"You have {years_until_octagenarian} years left until you are an octagenarian.")
 
