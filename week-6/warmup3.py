@@ -3,11 +3,11 @@
 def add(a, b):
     total = a + b
 result = add(42, 6)
-print(result)
+#print(total)
 
 # return value solution
-def subtract(a, b):
-    return a - b
-result = subtract(42, 6)
+def add(a, b):
+    return a + b
+result = add(42, 6)
 print(result)
 
