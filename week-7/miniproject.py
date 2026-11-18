@@ -1,13 +1,17 @@
 #part2 miniproject expense report generator
 # step 1 - verify that file exists
 import os
-if os.path.exists("../python-intro-homework/week-7/data/expenses.csv"):
+import sys
+
+csv_path = "../python-intro-homework/week-7/data/expenses.csv"
+
+if os.path.exists(csv_path):
     print("expenses.csv found.")
 else:
-    print("expenses.csv not found.")
+    print("Error: expenses.csv not found.")
+    sys.exit(1)
     
 # step 2 - read the csv file into list of dictionaries
-
 import csv
 with open('../python-intro-homework/week-7/data/expenses.csv', 'r') as file:
     expenses = list(csv.DictReader(file))
@@ -28,10 +32,9 @@ from datetime import datetime
 now = datetime.now()
 with open('../python-intro-homework/week-7/food_report.txt', 'w') as file:
     file.write("Food Expense Report — generated [" + now.strftime("%B %d, %Y") + "]")
-    file.write("\ntest line test") 
     food_item = [item for item in expenses if item['category'] == 'Food']
     for item in food_item:
         file.write(f"\n{item['date']}: ${item['amount']}")
-    file.write(f"\nTotal food expense: ${total_food_expense:.2f}")
+    file.write(f"\nTotal: ${total_food_expense:.2f}")
 
 
